@@ -41,4 +41,4 @@ This library is being maintained as a standalone public backend so it can be con
 
 ## License
 
-Add the project license here if it is not already defined elsewhere before publishing broadly.
+This project is licensed under the Apache License 2.0. See [`LICENSE`](LICENSE).

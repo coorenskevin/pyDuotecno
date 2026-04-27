@@ -1,6 +1,6 @@
-# pyDuotecno
+# pyDuotecno-ng
 
-`pyDuotecno` is the standalone Python library for communicating with Duotecno controllers.
+`pyDuotecno-ng` is the standalone Python library for communicating with Duotecno controllers.
 
 It contains the protocol and transport layer used by the Home Assistant Duotecno integration, including:
 
@@ -38,6 +38,27 @@ The main consumer of this library is the Duotecno Home Assistant integration. Th
 ## Status
 
 This library is being maintained as a standalone public backend so it can be consumed cleanly by the Home Assistant integration and other future tooling if needed.
+
+## Releases
+
+This repository is intended to publish tagged releases that match the PyPI package version exactly.
+
+The PyPI distribution name is `pyDuotecno-ng`. The Python import package remains `duotecno`.
+
+Release flow:
+
+1. update `pyproject.toml` to the new version
+2. commit the version change to `main`
+3. create and push a matching tag in the form `vYYYY.M.N`
+4. GitHub Actions builds the wheel and source distribution
+5. the workflow publishes the package to PyPI
+6. the same release artifacts are attached to the GitHub release
+
+This matches Home Assistant expectations that:
+
+- the dependency source is public
+- published package versions correspond to tagged source releases
+- PyPI artifacts are built from the same tagged revision
 
 ## License
 

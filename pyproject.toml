@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyDuotecno-ng"
+version = "2026.4.1"
+description = "Standalone Python library for communicating with Duotecno controllers"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+authors = [
+  { name = "Coorens Kevin" }
+]
+keywords = ["duotecno", "home-assistant", "automation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Home Automation",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "aiohttp>=3.9",
+  "yarl>=1.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/coorenskevin/pyDuotecno-ng"
+Repository = "https://github.com/coorenskevin/pyDuotecno-ng"
+Issues = "https://github.com/coorenskevin/pyDuotecno-ng/issues"
+Changelog = "https://github.com/coorenskevin/pyDuotecno-ng/releases"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["duotecno"]
+
+[tool.setuptools.package-dir]
+duotecno = "."
+
+[tool.setuptools.package-data]
+duotecno = ["py.typed"]
